@@ -1,0 +1,445 @@
+{
+  "identity": {
+    "name": "Escola Museo da Emigración",
+    "motto": "Galegos: As máns de América",
+    "foundation": "Escola-Museo de la Emigración Gallega",
+    "seat": "Escola do Castro de Gaxate, parroquia de Gaxate, concello da Lama (Galicia)",
+    "contactName": "Nieves",
+    "email": "mercadodelatiani@gmail.com",
+    "address": "O Castro 2, Gaxate, 36853"
+  },
+  "nav": [
+    {
+      "id": "inicio",
+      "label": "Portada · O porto"
+    },
+    {
+      "id": "gaxate",
+      "label": "Unha historia próxima"
+    },
+    {
+      "id": "escuela",
+      "label": "A escola de 1934"
+    },
+    {
+      "id": "por-que",
+      "label": "Por que este museo"
+    },
+    {
+      "id": "propuesta",
+      "label": "Proposta e obxectivo"
+    },
+    {
+      "id": "viaje",
+      "label": "A viaxe"
+    },
+    {
+      "id": "coleccion",
+      "label": "A maleta"
+    },
+    {
+      "id": "casa-museo",
+      "label": "A casa-museo"
+    },
+    {
+      "id": "ruta",
+      "label": "Roteiro guiado por Gaxate"
+    },
+    {
+      "id": "fundacion",
+      "label": "O proxecto e a fundación"
+    },
+    {
+      "id": "apoya",
+      "label": "Escríbenos"
+    }
+  ],
+  "hero": {
+    "kicker": "Proxecto",
+    "title": "Escola Museo da Emigración",
+    "motto": "Galegos: As máns de América",
+    "lead": "Conservar e expor a memoria histórica e as creacións das sucesivas xeracións de emigrantes.",
+    "cta": "Esvara para embarcar",
+    "cta2": "Apoia o proxecto"
+  },
+  "gaxate": {
+    "title": "Unha historia próxima que se repite en toda Galicia",
+    "text": "O concello da Lama, e a parroquia de Gaxate en particular, son un magnífico exemplo dunha historia próxima que se repite en toda Galicia: o fenómeno da emigración de moitos mozos que buscaban fortuna e fuxían, ao mesmo tempo, da fame e do servizo militar obrigatorio.",
+    "fact": "Unha comarca onde a gran maioría da poboación emigrou a América a comezos do século XX, e onde gran parte das construcións son casas de indianos."
+  },
+  "escuela": {
+    "title": "Unha escola erguida dende América",
+    "text": "A escola do Castro de Gaxate foi construída en 1934 co diñeiro achegado por Wenceslao Barreiro, veciño de Gaxate e cauchero no Amazonas, e co traballo dos veciños da aldea.",
+    "year": "1934",
+    "foot": "Hoxe, esa mesma escola será a sede do museo."
+  },
+  "porque": {
+    "quoteBefore": "A pesar da importancia que tivo este fenómeno na nosa sociedade, ",
+    "quoteStrong": "na actualidade non hai en Galicia ningún arquivo nin museo dedicado á emigración",
+    "quoteAfter": " no que se explique de forma didáctica como se produciu este fenómeno, feito fundamental da nosa historia recente.",
+    "text": "Labor fundamental, e principal obxectivo deste proxecto, é a sensibilización da poboación para a conservación do noso patrimonio etnográfico relacionado coa emigración, boa parte do cal aínda se atopa en mans privadas e ten un destino incerto. Tamén realizar actividades que poñan en valor o fenómeno da emigración galega.",
+    "subtitle": "Motivacións",
+    "motivations": [
+      {
+        "title": "Polas características de Gaxate",
+        "text": "Un claro e único expoñente de conxunto arquitectónico indiano de Galicia."
+      },
+      {
+        "title": "O contorno",
+        "text": "Nunha comarca onde a gran maioría da poboación emigrou a América a comezos do século XX, e onde gran parte das construcións son casas de indianos."
+      },
+      {
+        "title": "A dinamización",
+        "text": "A que suporía para a zona a instalación dun punto turístico cultural destas características, que ademais xeraría postos de traballo e riqueza para a zona."
+      }
+    ]
+  },
+  "propuesta": {
+    "proposalTitle": "Proposta",
+    "proposal": "Creación da ESCOLA MUSEO DA EMIGRACIÓN, que traballará para conservar e expor a memoria histórica e as creacións das sucesivas xeracións de emigrantes.",
+    "objectiveTitle": "Obxectivo",
+    "objectives": [
+      "Promover, incentivar e promocionar as actividades dirixidas ao establecemento dun centro de documentación sobre o fenómeno da emigración que dea lugar a unha ampla base de datos capaz, á súa vez, de xerar investigacións de múltiple signo relacionadas coa emigración a América durante os séculos XIX e XX.",
+      "Crear un museo de gran importancia divulgativa sobre os valores e a achega da emigración galega na construción e no desenvolvemento dos países de acollida, e tamén ao impulso e progreso de Galicia en virtude da creación de escolas, fundacións, obras pías, colexios, empresas e un longo catálogo de iniciativas que impulsaron o desenvolvemento nas rexións de partida."
+    ],
+    "bookNoteBefore": "A exposición sobre a AVENTURA AMERICANA basearase no libro ",
+    "bookNoteAfter": ", onde están representados algúns dos indianos de Gaxate, entre outros.",
+    "sign": "Escola Museo da Emigración"
+  },
+  "viaje": {
+    "title": "A aventura americana",
+    "lead": "A exposición, cunha parte permanente e outra temporal, amosará mediante fotografías, obxectos, documentos e prensa da época as distintas etapas da viaxe a América, os países de acollida e os diferentes oficios que se desempeñaron en cada un deles.",
+    "stops": [
+      {
+        "title": "Embarque",
+        "caption": "A despedida no porto e a maleta lista.",
+        "object": "Pano de despedida"
+      },
+      {
+        "title": "Vida a bordo",
+        "caption": "Días e noites cruzando o océano.",
+        "object": "Ollo de boi"
+      },
+      {
+        "title": "Recepción nos países",
+        "caption": "A chegada a unha terra nova.",
+        "object": "Selo de chegada"
+      },
+      {
+        "title": "Hoteis de emigrantes",
+        "caption": "O primeiro teito ao outro lado do mar.",
+        "object": "Chave do cuarto"
+      },
+      {
+        "title": "Viaxe de volta",
+        "caption": "O regreso á casa.",
+        "object": "Compás"
+      },
+      {
+        "title": "Indianos",
+        "caption": "Os que volveron e deixaron a súa pegada na aldea.",
+        "object": "Carta á casa"
+      }
+    ]
+  },
+  "coleccion": {
+    "title": "O que garda a maleta",
+    "lead": "Pezas da época que contarán a viaxe.",
+    "items": [
+      "Fotografías",
+      "Maquetas",
+      "Documentación",
+      "Obxectos",
+      "Mobles",
+      "Libros",
+      "Outros"
+    ]
+  },
+  "casa": {
+    "title": "A casa-museo",
+    "lead": "Percorre o plano do recinto: cada espazo ten a súa ficha.",
+    "sectionsTitle": "Seccións da casa-museo",
+    "sections": [
+      {
+        "title": "Exposición",
+        "text": "Parte permanente e parte temporal: as etapas da viaxe a América, os países de acollida e os oficios. Galegos: As máns de América."
+      },
+      {
+        "title": "Biblioteca, arquivo especializado documental e sonoro",
+        "text": "En emigración galega a América: Biblioteca · Audioteca · Fototeca."
+      },
+      {
+        "title": "Sala de proxeccións inmersivas á carta",
+        "text": ""
+      },
+      {
+        "title": "Centro social do emigrante",
+        "text": "Con cafetaría, salón de reunións e lugar de encontro. O obxectivo deste espazo é promover, mediante a realización de eventos e actividades, o encontro entre emigrantes e toda aquela persoa que estea interesada no tema."
+      },
+      {
+        "title": "Libraría especializada",
+        "text": ""
+      },
+      {
+        "title": "Outras seccións",
+        "text": "Oficina."
+      }
+    ],
+    "spaces": [
+      {
+        "id": "recepcion",
+        "n": 1,
+        "title": "Recepción / Entrada",
+        "text": "A entrada ao recinto e o comezo do percorrido, sinalizado con frechas."
+      },
+      {
+        "id": "paneles",
+        "n": 2,
+        "title": "Paneis de exposición",
+        "text": "Paneis ao longo do muro, co percorrido sinalizado con frechas."
+      },
+      {
+        "id": "sala",
+        "n": 3,
+        "title": "Sala principal de exposicións temporais",
+        "text": "Exposición con parte permanente e parte temporal: as etapas da viaxe a América, os países de acollida e os oficios. Galegos: As máns de América."
+      },
+      {
+        "id": "tienda",
+        "n": 4,
+        "title": "Tenda-libraría",
+        "text": "Libraría especializada."
+      },
+      {
+        "id": "baja",
+        "n": 5,
+        "title": "Planta baixa: sala de proxeccións e arquivo bibliográfico",
+        "text": "Sala de proxeccións inmersivas á carta e arquivo bibliográfico."
+      },
+      {
+        "id": "alta",
+        "n": 6,
+        "title": "Planta alta: arquivo documental e sonoro",
+        "text": "Arquivo especializado documental e sonoro en emigración galega a América: Biblioteca · Audioteca · Fototeca."
+      },
+      {
+        "id": "patio",
+        "n": 7,
+        "title": "Patio con carpa",
+        "text": "Actividades e conferencias."
+      },
+      {
+        "id": "cafeteria",
+        "n": 8,
+        "title": "Servizo de cafetaría",
+        "text": "Centro social do emigrante, con cafetaría, salón de reunións e lugar de encontro."
+      },
+      {
+        "id": "vivienda",
+        "n": 9,
+        "title": "Vivenda",
+        "text": "Aloxamento turístico."
+      },
+      {
+        "id": "aseo",
+        "n": 10,
+        "title": "Aseo",
+        "text": "Aseo."
+      }
+    ]
+  },
+  "ruta": {
+    "title": "Roteiro guiado por Gaxate",
+    "text": "Un roteiro guiado pola aldea, con audioguía, contará aos visitantes a historia das casas e das familias, amosando todo o peculiar e anecdótico relacionado coa emigración e cos indianos de Gaxate, así como a vida dunha aldea de Galicia na primeira metade do século XX.",
+    "cta": "Quero saber cando se inaugura"
+  },
+  "fundacion": {
+    "title": "Folla de ruta do proxecto",
+    "steps": [
+      {
+        "strong": "Constitución dunha fundación ou asociación cultural",
+        "rest": " de carácter benéfico de promoción."
+      },
+      {
+        "strong": "Aluguer das escolas do Castro",
+        "rest": " como sede do museo."
+      },
+      {
+        "strong": "Habilitación da escola como museo",
+        "rest": ": unha exposición sobre a AVENTURA AMERICANA baseada no libro Galegos: As máns de América, ademais dun arquivo, unha tenda especializada e un centro social."
+      },
+      {
+        "strong": "Constitución dun padroado",
+        "rest": " formado por membros de organismos colaboradores e privados."
+      },
+      {
+        "strong": "Creación dun roteiro guiado",
+        "rest": " pola aldea con audioguía."
+      }
+    ]
+  },
+  "form": {
+    "title": "Proxecto – Fundación",
+    "subtitle": "Escola-Museo de la Emigración Gallega",
+    "lead": "Escríbenos unha carta: súmate ao proxecto.",
+    "submit": "Enviar carta",
+    "success": "A túa carta vai de camiño! Grazas por sumarte á Escola Museo da Emigración.",
+    "wish1": "Recibir información da evolución do proxecto",
+    "wish2": "Apoialo economicamente cando estea desenvolvido",
+    "privacy": "Lin e acepto a política de privacidade"
+  },
+  "footer": {
+    "line1": "Proxecto de museo e centro de documentación sobre a emigración galega a América · Escola do Castro de Gaxate, A Lama.",
+    "credits": [
+      "Contidos: documento do proxecto Escola Museo da Emigración.",
+      "Ilustracións inspiradas en fotografías e postais de época do proxecto."
+    ]
+  },
+  "meta": {
+    "title": "Escola Museo da Emigración · Galegos: As máns de América",
+    "description": "Conservar e expor a memoria histórica e as creacións das sucesivas xeracións de emigrantes. Proxecto de museo e centro de documentación sobre a emigración galega a América na escola do Castro de Gaxate, na Lama.",
+    "ogDescription": "Conservar e expor a memoria histórica e as creacións das sucesivas xeracións de emigrantes.",
+    "locale": "gl_ES"
+  },
+  "ui": {
+    "skip": "Saltar ao contido",
+    "preloader": {
+      "label": "Cargando a Escola Museo da Emigración",
+      "skip": "Saltar"
+    },
+    "topbar": {
+      "home": "Escola Museo da Emigración · ir ao inicio",
+      "reduceMotion": "Reducir o movemento",
+      "soundOn": "Activar o son ambiente",
+      "soundOnTitle": "Activar o son ambiente (mar e vento)",
+      "soundOff": "Silenciar o son ambiente",
+      "language": "Idioma",
+      "support": "Apoia",
+      "openIndex": "Abrir o índice da viaxe",
+      "index": "Índice"
+    },
+    "dots": "Escenas",
+    "menu": {
+      "label": "Índice da viaxe",
+      "kicker": "Caderno de bitácora",
+      "close": "Pechar"
+    },
+    "kickers": {
+      "gaxate": "Unha historia próxima",
+      "escuela": "A escola de 1934",
+      "porque": "Por que este museo",
+      "propuesta": "Proposta e obxectivo",
+      "viaje": "A viaxe · estrutura da exposición",
+      "coleccion": "A maleta · material exposto",
+      "casa": "A casa-museo · plano ilustrado",
+      "ruta": "Roteiro guiado · audioguía",
+      "fundacion": "O proxecto e a fundación",
+      "apoya": "Escríbenos · o sobre"
+    },
+    "art": {
+      "hero": "Ilustración: un gran transatlántico de vapor atracado no porto, con fume nas chemineas, gaivotas, un faro na costa, guindastres e a multitude despedíndose no peirao. En primeiro plano, unha maleta antiga con etiquetas e unha postal datada en 1913.",
+      "gaxate": "Ilustración: outeiros verdes con néboa e a aldea de Gaxate, con casas de indianos de galerías brancas entre carballos, un hórreo xunto ao camiño e, en primeiro plano, un mozo de costas coa súa maleta mirando cara ao horizonte.",
+      "galiciaMap": "Mapa de Galicia cun punto que sinala A Lama",
+      "escuela": "Ilustración: a escola do Castro de Gaxate, unha casa baixa de pedra con tellado de tella e grandes ventás brancas, xunto ao bosque. Diante, veciños cargan pedras e madeira para construíla.",
+      "letterMap": "Mapa: unha carta viaxa por unha ruta punteada dende o Amazonas, en Sudamérica, ata Gaxate, en Galicia.",
+      "porque": "Ilustración: unha mesa de arquivo vista dende arriba, con fotografías antigas, cartas, sobres, selos, unha postal, unha cámara de fol e un baúl entreaberto.",
+      "propuesta": "Ilustración: baixo un ceo cálido, a escola do Castro cun cartel colgado que di «Escola Museo da Emigración». Diante, ábrese o libro «Galegos: As máns de América», de cuberta negra con letras douradas.",
+      "viaje": "Ilustración: o transatlántico cruza o océano de esquerda a dereita mentres pasan detrás o peirao galego da despedida, a noite en alta mar, un porto americano con luz cálida, un gran hotel de emigrantes, o regreso entre a néboa e unha casa de indiano con galería branca e palmeira.",
+      "viajeStop": "Ilustración da parada «{title}»",
+      "coleccion": "Ilustración: unha gran maleta antiga de coiro con ferraxes de latón ábrese e dela saen voando etiquetas de viaxe cos materiais que se van expor.",
+      "casaPlan": "Plano ilustrado da casa-museo: recinto amurallado coa entrada e a recepción, paneis de exposición ao longo do muro, a escola coa sala principal, a tenda-libraría e a sala de proxeccións co arquivo bibliográfico, a planta alta co arquivo documental e sonoro, o patio con carpa, a cafetaría, a vivenda e o aseo. Unhas frechas marcan o percorrido.",
+      "rutaMap": "Mapa ilustrado de Gaxate: un camiño punteado percorre a aldea entre prados, carballos e casas de indianos sinaladas con números.",
+      "footerMap": "Ruta punteada que cruza o Atlántico dende Sudamérica e remata en Gaxate"
+    },
+    "escuela": {
+      "letterKicker": "Carta dende o Amazonas",
+      "builtIn": "Construída en",
+      "ocean": "OCÉANO ATLÁNTICO",
+      "amazon": "Amazonas"
+    },
+    "porque": {
+      "fileCard": "Ficha de arquivo",
+      "no": "N.º",
+      "postmark": "CORREOS · ESPAÑA · AMÉRICA · "
+    },
+    "viaje": {
+      "stop": "Parada",
+      "interactive": "obxecto interactivo",
+      "arrival": "CHEGADA · AMÉRICA · ",
+      "stopsLabel": "Paradas da viaxe",
+      "keepScrolling": "Segue baixando: o barco zarpa ↓"
+    },
+    "coleccion": {
+      "itemsLabel": "Material que se vai expor",
+      "postmark": "CORREOS · GAXATE · AMÉRICA · "
+    },
+    "casa": {
+      "fileCard": "Ficha · espazo",
+      "spacesLabel": "Espazos do recinto",
+      "entrance": "ENTRADA",
+      "upperFloor": "PLANTA ALTA ↑"
+    },
+    "ruta": {
+      "parish": "PARROQUIA DE GAXATE · A LAMA"
+    },
+    "fundacion": {
+      "register": "Libro de rexistro",
+      "step": "Paso",
+      "stampStep": "PASO",
+      "stamps": [
+        "FUNDACIÓN",
+        "SEDE",
+        "MUSEO",
+        "PADROADO",
+        "ROTEIRO"
+      ]
+    },
+    "form": {
+      "optional": "(opcional)",
+      "requiredBefore": "Os campos con ",
+      "requiredAfter": " son obrigatorios.",
+      "salutation1": "Á Escola Museo da Emigración,",
+      "salutation2": "escola do Castro · Gaxate",
+      "name": "Don / Dona · Nome",
+      "dni": "DNI",
+      "company": "Empresa",
+      "address": "Enderezo",
+      "country": "País",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "countryPlaceholder": "— Escolle un país —",
+      "countryFeatured": "Destacados",
+      "countryAll": "Todos os países",
+      "wishes": "Desexo",
+      "notes": "Observacións",
+      "honeypot": "Non enchas este campo",
+      "privacyHint": "Ao enviala, abrirase o teu programa de correo coa carta dirixida a {email}.",
+      "closing": "Un saúdo cordial,",
+      "errorSummary": "Hai algún dato que revisar na carta. Non se perdeu nada do que escribiches.",
+      "errName": "Escribe o teu nome para asinar a carta.",
+      "errEmailMissing": "Necesitamos un correo electrónico para poder responderche.",
+      "errEmailInvalid": "Revisa o correo electrónico: parece que falta algo (por exemplo, nome@dominio.com).",
+      "errPhone": "Revisa o teléfono: usa só números, espazos e o prefixo +.",
+      "errPrivacy": "Para enviar a carta debes aceptar a política de privacidade.",
+      "mailSubject": "Carta de apoio",
+      "mailName": "Nome",
+      "mailYes": "si",
+      "mailTo": "Para",
+      "sentPostmark": "CARTA ENVIADA · GAXATE · ",
+      "sentBefore": "Abriuse o teu programa de correo coa carta xa escrita: só tes que premer «Enviar». Se non se abriu, podes ",
+      "sentReopen": "abrila de novo",
+      "sentOr": " ou escribir directamente a ",
+      "copy": "Copiar o texto da carta",
+      "copied": "Texto copiado ✓",
+      "again": "Escribir outra carta"
+    },
+    "footer": {
+      "contact": "Contacto",
+      "contactPerson": "Persoa de contacto:",
+      "seat": "Sede prevista: escola do Castro de Gaxate, A Lama.",
+      "credits": "Créditos",
+      "navLabel": "Escenas da viaxe",
+      "voyage": "A viaxe"
+    }
+  }
+}

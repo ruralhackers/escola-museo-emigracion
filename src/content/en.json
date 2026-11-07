@@ -1,0 +1,445 @@
+{
+  "identity": {
+    "name": "Escola Museo da Emigración",
+    "motto": "Galegos: As máns de América",
+    "foundation": "Escola-Museo de la Emigración Gallega",
+    "seat": "Castro de Gaxate School, parish of Gaxate, municipality of A Lama (Galicia)",
+    "contactName": "Nieves",
+    "email": "mercadodelatiani@gmail.com",
+    "address": "O Castro 2, Gaxate, 36853"
+  },
+  "nav": [
+    {
+      "id": "inicio",
+      "label": "Home · The port"
+    },
+    {
+      "id": "gaxate",
+      "label": "A story close to home"
+    },
+    {
+      "id": "escuela",
+      "label": "The 1934 school"
+    },
+    {
+      "id": "por-que",
+      "label": "Why this museum"
+    },
+    {
+      "id": "propuesta",
+      "label": "Proposal and aims"
+    },
+    {
+      "id": "viaje",
+      "label": "The voyage"
+    },
+    {
+      "id": "coleccion",
+      "label": "The suitcase"
+    },
+    {
+      "id": "casa-museo",
+      "label": "The house-museum"
+    },
+    {
+      "id": "ruta",
+      "label": "Guided walk through Gaxate"
+    },
+    {
+      "id": "fundacion",
+      "label": "The project and the foundation"
+    },
+    {
+      "id": "apoya",
+      "label": "Write to us"
+    }
+  ],
+  "hero": {
+    "kicker": "Project",
+    "title": "Escola Museo da Emigración",
+    "motto": "Galegos: As máns de América",
+    "lead": "Preserving and sharing the historical memory and the creations of successive generations of emigrants.",
+    "cta": "Scroll to board",
+    "cta2": "Support the project"
+  },
+  "gaxate": {
+    "title": "A story close to home, repeated all over Galicia",
+    "text": "The municipality of A Lama, and the parish of Gaxate in particular, are a striking example of a story close to home that repeats itself all over Galicia: the emigration of many young people who set out to seek their fortune while escaping hunger and compulsory military service.",
+    "fact": "An area where the vast majority of the population emigrated to the Americas in the early 20th century, and where many of the buildings are indiano houses."
+  },
+  "escuela": {
+    "title": "A school built from the Americas",
+    "text": "The Castro de Gaxate school was built in 1934 with money provided by Wenceslao Barreiro, a Gaxate local who worked as a rubber tapper in the Amazon, and with the labour of the villagers.",
+    "year": "1934",
+    "foot": "Today, that same school is set to become the museum's home."
+  },
+  "porque": {
+    "quoteBefore": "Despite the importance this phenomenon has had in our society, ",
+    "quoteStrong": "there is currently no archive or museum in Galicia devoted to emigration",
+    "quoteAfter": " that explains, in an educational way, how it came about — a defining chapter of our recent history.",
+    "text": "A fundamental task, and the main aim of this project, is to raise public awareness of the need to preserve our ethnographic heritage linked to emigration, much of which is still in private hands and faces an uncertain future. The project also aims to run activities that highlight the value of Galician emigration.",
+    "subtitle": "Our reasons",
+    "motivations": [
+      {
+        "title": "Gaxate's character",
+        "text": "A clear and unique example of an indiano architectural ensemble in Galicia."
+      },
+      {
+        "title": "The setting",
+        "text": "An area where the vast majority of the population emigrated to the Americas in the early 20th century, and where many of the buildings are indiano houses."
+      },
+      {
+        "title": "Bringing the area to life",
+        "text": "A cultural visitor attraction of this kind would revitalise the area, and would also create jobs and wealth locally."
+      }
+    ]
+  },
+  "propuesta": {
+    "proposalTitle": "Proposal",
+    "proposal": "To create the ESCOLA MUSEO DA EMIGRACIÓN, which will work to preserve and share the historical memory and the creations of successive generations of emigrants.",
+    "objectiveTitle": "Aims",
+    "objectives": [
+      "To promote and encourage activities aimed at establishing a documentation centre on emigration, building a broad database that can in turn support many kinds of research on emigration to the Americas in the 19th and 20th centuries.",
+      "To create a museum with a strong public-outreach role, presenting the values and contribution of Galician emigrants to the building and development of their host countries, and to the progress of Galicia itself through the founding of schools, foundations, charitable works, colleges, businesses and a long list of initiatives that drove development in the regions they had left."
+    ],
+    "bookNoteBefore": "The exhibition on the AMERICAN ADVENTURE will be based on the book ",
+    "bookNoteAfter": ", which features some of Gaxate's indianos, among others.",
+    "sign": "Escola Museo da Emigración"
+  },
+  "viaje": {
+    "title": "The American adventure",
+    "lead": "With a permanent section and a temporary one, the exhibition will use photographs, objects, documents and newspapers of the time to show the stages of the voyage to the Americas, the host countries and the different trades emigrants took up in each of them.",
+    "stops": [
+      {
+        "title": "Embarkation",
+        "caption": "Farewells at the port, the suitcase packed.",
+        "object": "Farewell handkerchief"
+      },
+      {
+        "title": "Life on board",
+        "caption": "Days and nights crossing the ocean.",
+        "object": "Porthole"
+      },
+      {
+        "title": "Arrival in new countries",
+        "caption": "Reaching a new land.",
+        "object": "Arrival stamp"
+      },
+      {
+        "title": "Emigrant hotels",
+        "caption": "A first roof on the far side of the sea.",
+        "object": "Room key"
+      },
+      {
+        "title": "The voyage home",
+        "caption": "Coming back home.",
+        "object": "Compass"
+      },
+      {
+        "title": "Indianos",
+        "caption": "Those who came back and left their mark on the village.",
+        "object": "Letter home"
+      }
+    ]
+  },
+  "coleccion": {
+    "title": "What the suitcase holds",
+    "lead": "Period pieces that will tell the story of the voyage.",
+    "items": [
+      "Photographs",
+      "Models",
+      "Documents",
+      "Objects",
+      "Furniture",
+      "Books",
+      "Other items"
+    ]
+  },
+  "casa": {
+    "title": "The house-museum",
+    "lead": "Explore the site plan: each space has its own record card.",
+    "sectionsTitle": "Sections of the house-museum",
+    "sections": [
+      {
+        "title": "Exhibition",
+        "text": "A permanent section and a temporary one: the stages of the voyage to the Americas, the host countries and the trades. Galegos: As máns de América."
+      },
+      {
+        "title": "Library and specialist documentary and sound archive",
+        "text": "On Galician emigration to the Americas: Library · Sound archive · Photo archive."
+      },
+      {
+        "title": "On-demand immersive screening room",
+        "text": ""
+      },
+      {
+        "title": "Emigrants' social centre",
+        "text": "With a café, a meeting room and a place to gather. This space aims to bring together emigrants and anyone interested in the subject through events and activities."
+      },
+      {
+        "title": "Specialist bookshop",
+        "text": ""
+      },
+      {
+        "title": "Other sections",
+        "text": "Office."
+      }
+    ],
+    "spaces": [
+      {
+        "id": "recepcion",
+        "n": 1,
+        "title": "Reception / Entrance",
+        "text": "The entrance to the site and the start of the visit, signposted with arrows."
+      },
+      {
+        "id": "paneles",
+        "n": 2,
+        "title": "Exhibition panels",
+        "text": "Panels along the wall, with the route signposted with arrows."
+      },
+      {
+        "id": "sala",
+        "n": 3,
+        "title": "Main temporary exhibition hall",
+        "text": "An exhibition with a permanent section and a temporary one: the stages of the voyage to the Americas, the host countries and the trades. Galegos: As máns de América."
+      },
+      {
+        "id": "tienda",
+        "n": 4,
+        "title": "Shop and bookshop",
+        "text": "Specialist bookshop."
+      },
+      {
+        "id": "baja",
+        "n": 5,
+        "title": "Ground floor: screening room and book archive",
+        "text": "On-demand immersive screening room and book archive."
+      },
+      {
+        "id": "alta",
+        "n": 6,
+        "title": "Upper floor: documentary and sound archive",
+        "text": "Specialist documentary and sound archive on Galician emigration to the Americas: Library · Sound archive · Photo archive."
+      },
+      {
+        "id": "patio",
+        "n": 7,
+        "title": "Courtyard with marquee",
+        "text": "Activities and talks."
+      },
+      {
+        "id": "cafeteria",
+        "n": 8,
+        "title": "Café",
+        "text": "Emigrants' social centre, with a café, a meeting room and a place to gather."
+      },
+      {
+        "id": "vivienda",
+        "n": 9,
+        "title": "Living quarters",
+        "text": "Tourist accommodation."
+      },
+      {
+        "id": "aseo",
+        "n": 10,
+        "title": "Toilets",
+        "text": "Toilets."
+      }
+    ]
+  },
+  "ruta": {
+    "title": "Guided walk through Gaxate",
+    "text": "A guided walk through the village, with an audio guide, will tell visitors the story of its houses and families, bringing out everything distinctive and anecdotal about emigration and Gaxate's indianos, as well as the life of a Galician village in the first half of the 20th century.",
+    "cta": "Tell me when it opens"
+  },
+  "fundacion": {
+    "title": "Project roadmap",
+    "steps": [
+      {
+        "strong": "Setting up a foundation or cultural association",
+        "rest": " for charitable and promotional purposes."
+      },
+      {
+        "strong": "Renting the Castro schools",
+        "rest": " as the museum's home."
+      },
+      {
+        "strong": "Fitting out the school as a museum",
+        "rest": ": an exhibition on the AMERICAN ADVENTURE based on the book Galegos: As máns de América, together with an archive, a specialist shop and a social centre."
+      },
+      {
+        "strong": "Forming a board of trustees",
+        "rest": " made up of members of partner and private organisations."
+      },
+      {
+        "strong": "Creating a guided walk",
+        "rest": " through the village with an audio guide."
+      }
+    ]
+  },
+  "form": {
+    "title": "Project – Foundation",
+    "subtitle": "Escola-Museo de la Emigración Gallega",
+    "lead": "Write us a letter: join the project.",
+    "submit": "Send letter",
+    "success": "Your letter is on its way! Thank you for joining the Escola Museo da Emigración.",
+    "wish1": "Receive news on how the project is progressing",
+    "wish2": "Support it financially once it is up and running",
+    "privacy": "I have read and accept the privacy policy"
+  },
+  "footer": {
+    "line1": "A museum and documentation centre project on Galician emigration to the Americas · Castro de Gaxate School, A Lama.",
+    "credits": [
+      "Content: the Escola Museo da Emigración project document.",
+      "Illustrations inspired by period photographs and postcards from the project."
+    ]
+  },
+  "meta": {
+    "title": "Escola Museo da Emigración · Galegos: As máns de América",
+    "description": "Preserving and sharing the historical memory and the creations of successive generations of emigrants. A museum and documentation centre project on Galician emigration to the Americas, at the Castro de Gaxate school in A Lama.",
+    "ogDescription": "Preserving and sharing the historical memory and the creations of successive generations of emigrants.",
+    "locale": "en_GB"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "preloader": {
+      "label": "Loading the Escola Museo da Emigración",
+      "skip": "Skip"
+    },
+    "topbar": {
+      "home": "Escola Museo da Emigración · back to the start",
+      "reduceMotion": "Reduce motion",
+      "soundOn": "Turn on ambient sound",
+      "soundOnTitle": "Turn on ambient sound (sea and wind)",
+      "soundOff": "Mute ambient sound",
+      "language": "Language",
+      "support": "Support",
+      "openIndex": "Open the voyage index",
+      "index": "Index"
+    },
+    "dots": "Scenes",
+    "menu": {
+      "label": "Voyage index",
+      "kicker": "Ship's logbook",
+      "close": "Close"
+    },
+    "kickers": {
+      "gaxate": "A story close to home",
+      "escuela": "The 1934 school",
+      "porque": "Why this museum",
+      "propuesta": "Proposal and aims",
+      "viaje": "The voyage · how the exhibition is laid out",
+      "coleccion": "The suitcase · what will be on display",
+      "casa": "The house-museum · illustrated plan",
+      "ruta": "Guided walk · audio guide",
+      "fundacion": "The project and the foundation",
+      "apoya": "Write to us · the envelope"
+    },
+    "art": {
+      "hero": "Illustration: a large steam ocean liner moored in port, with smoke rising from its funnels, gulls, a lighthouse on the coast, cranes and a crowd waving goodbye on the quay. In the foreground, an old suitcase covered in labels and a postcard dated 1913.",
+      "gaxate": "Illustration: green, misty hills and the village of Gaxate, with white-galleried indiano houses among oak trees and a hórreo beside the path. In the foreground, a young man seen from behind with his suitcase, looking towards the horizon.",
+      "galiciaMap": "Map of Galicia with a dot marking A Lama",
+      "escuela": "Illustration: the Castro de Gaxate school, a low stone building with a tiled roof and large white windows, beside the woods. In front, villagers carry stones and timber to build it.",
+      "letterMap": "Map: a letter travels along a dotted route from the Amazon, in South America, to Gaxate, in Galicia.",
+      "porque": "Illustration: an archive table seen from above, with old photographs, letters, envelopes, stamps, a postcard, a bellows camera and a half-open trunk.",
+      "propuesta": "Illustration: under a warm sky, the Castro school with a hanging sign that reads “Escola Museo da Emigración”. In front, the book “Galegos: As máns de América”, with a black cover and gold lettering, opens.",
+      "viaje": "Illustration: the ocean liner crosses the sea from left to right while, behind it, we pass the Galician quay of farewell, night on the open sea, a warmly lit American port, a large emigrant hotel, the return through the fog and an indiano house with a white gallery and a palm tree.",
+      "viajeStop": "Illustration for the stop “{title}”",
+      "coleccion": "Illustration: a large old leather suitcase with brass fittings opens, and travel labels naming the materials to be exhibited fly out of it.",
+      "casaPlan": "Illustrated plan of the house-museum: a walled site with the entrance and reception, exhibition panels along the wall, the school with the main hall, the shop and bookshop and the screening room with the book archive, the upper floor with the documentary and sound archive, the courtyard with a marquee, the café, the living quarters and the toilets. Arrows mark the route.",
+      "rutaMap": "Illustrated map of Gaxate: a dotted path runs through the village between meadows, oak trees and numbered indiano houses.",
+      "footerMap": "Dotted route crossing the Atlantic from South America and ending in Gaxate"
+    },
+    "escuela": {
+      "letterKicker": "Letter from the Amazon",
+      "builtIn": "Built in",
+      "ocean": "ATLANTIC OCEAN",
+      "amazon": "Amazon"
+    },
+    "porque": {
+      "fileCard": "Archive record",
+      "no": "No.",
+      "postmark": "CORREOS · SPAIN · AMERICA · "
+    },
+    "viaje": {
+      "stop": "Stop",
+      "interactive": "interactive object",
+      "arrival": "ARRIVAL · AMERICA · ",
+      "stopsLabel": "Stops on the voyage",
+      "keepScrolling": "Keep scrolling: the ship is setting sail ↓"
+    },
+    "coleccion": {
+      "itemsLabel": "Materials to be exhibited",
+      "postmark": "CORREOS · GAXATE · AMERICA · "
+    },
+    "casa": {
+      "fileCard": "Record · space",
+      "spacesLabel": "Spaces on the site",
+      "entrance": "ENTRANCE",
+      "upperFloor": "UPPER FLOOR ↑"
+    },
+    "ruta": {
+      "parish": "PARISH OF GAXATE · A LAMA"
+    },
+    "fundacion": {
+      "register": "Register",
+      "step": "Step",
+      "stampStep": "STEP",
+      "stamps": [
+        "FOUNDATION",
+        "HOME",
+        "MUSEUM",
+        "TRUSTEES",
+        "WALK"
+      ]
+    },
+    "form": {
+      "optional": "(optional)",
+      "requiredBefore": "Fields marked ",
+      "requiredAfter": " are required.",
+      "salutation1": "To the Escola Museo da Emigración,",
+      "salutation2": "Castro school · Gaxate",
+      "name": "Mr / Ms · Name",
+      "dni": "ID number (DNI)",
+      "company": "Company",
+      "address": "Address",
+      "country": "Country",
+      "phone": "Phone",
+      "email": "Email",
+      "countryPlaceholder": "— Choose a country —",
+      "countryFeatured": "Highlighted",
+      "countryAll": "All countries",
+      "wishes": "I would like to",
+      "notes": "Comments",
+      "honeypot": "Leave this field empty",
+      "privacyHint": "When you send it, your email program will open with the letter addressed to {email}.",
+      "closing": "Kind regards,",
+      "errorSummary": "Something in the letter needs checking. Nothing you wrote has been lost.",
+      "errName": "Write your name to sign the letter.",
+      "errEmailMissing": "We need an email address so we can reply to you.",
+      "errEmailInvalid": "Check the email address: something seems to be missing (for example, name@domain.com).",
+      "errPhone": "Check the phone number: use only digits, spaces and the + prefix.",
+      "errPrivacy": "To send the letter, you need to accept the privacy policy.",
+      "mailSubject": "Letter of support",
+      "mailName": "Name",
+      "mailYes": "yes",
+      "mailTo": "To",
+      "sentPostmark": "LETTER SENT · GAXATE · ",
+      "sentBefore": "Your email program has opened with the letter already written: just press “Send”. If it didn't open, you can ",
+      "sentReopen": "open it again",
+      "sentOr": " or write directly to ",
+      "copy": "Copy the letter text",
+      "copied": "Text copied ✓",
+      "again": "Write another letter"
+    },
+    "footer": {
+      "contact": "Contact",
+      "contactPerson": "Contact person:",
+      "seat": "Planned home: the Castro de Gaxate school, A Lama.",
+      "credits": "Credits",
+      "navLabel": "Voyage scenes",
+      "voyage": "The voyage"
+    }
+  }
+}
