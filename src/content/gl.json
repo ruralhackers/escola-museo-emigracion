@@ -46,10 +46,6 @@
       "label": "Roteiro guiado por Gaxate"
     },
     {
-      "id": "fundacion",
-      "label": "O proxecto e a fundación"
-    },
-    {
       "id": "apoya",
       "label": "Escríbenos"
     }
@@ -76,23 +72,7 @@
   "porque": {
     "quoteBefore": "A pesar da importancia que tivo este fenómeno na nosa sociedade, ",
     "quoteStrong": "na actualidade non hai en Galicia ningún arquivo nin museo dedicado á emigración no que se explique de forma didáctica como se produciu este fenómeno",
-    "quoteAfter": ", feito fundamental da nosa historia recente.",
-    "text": "Labor fundamental, e principal obxectivo deste proxecto, é a sensibilización da poboación para a conservación do noso patrimonio etnográfico relacionado coa emigración, boa parte do cal aínda se atopa en mans privadas e ten un destino incerto. Tamén realizar actividades que poñan en valor o fenómeno da emigración galega.",
-    "subtitle": "Motivacións",
-    "motivations": [
-      {
-        "title": "Polas características de Gaxate",
-        "text": "Un claro e único expoñente de conxunto arquitectónico indiano de Galicia."
-      },
-      {
-        "title": "O contorno",
-        "text": "Nunha comarca onde a gran maioría da poboación emigrou a América a comezos do século XX, e onde gran parte das construcións son casas de indianos."
-      },
-      {
-        "title": "A dinamización",
-        "text": "A que suporía para a zona a instalación dun punto turístico cultural destas características, que ademais xeraría postos de traballo e riqueza para a zona."
-      }
-    ]
+    "quoteAfter": ", feito fundamental da nosa historia recente."
   },
   "propuesta": {
     "proposalTitle": "Proposta",
@@ -102,9 +82,11 @@
       "Promover, incentivar e promocionar as actividades dirixidas ao establecemento dun centro de documentación sobre o fenómeno da emigración que dea lugar a unha ampla base de datos capaz, á súa vez, de xerar investigacións de múltiple signo relacionadas coa emigración a América durante os séculos XIX e XX.",
       "Crear un museo de gran importancia divulgativa sobre os valores e a achega da emigración galega na construción e no desenvolvemento dos países de acollida, e tamén ao impulso e progreso de Galicia en virtude da creación de escolas, fundacións, obras pías, colexios, empresas e un longo catálogo de iniciativas que impulsaron o desenvolvemento nas rexións de partida."
     ],
-    "bookNoteBefore": "A exposición sobre a AVENTURA AMERICANA basearase no libro ",
-    "bookNoteAfter": ", onde están representados algúns dos indianos de Gaxate, entre outros.",
-    "sign": "Escola Museo da Emigración"
+    "sign": "Escola Museo da Emigración",
+    "missionTitle": "A nosa misión: conservación e sensibilización",
+    "mission": "Sensibilizar a sociedade sobre a importancia de preservar e protexer o patrimonio etnográfico da emigración galega, gardado en moitos casos en coleccións privadas. Buscamos visibilizar o impacto transformador das xeracións migrantes, recoñecendo a súa valiosa achega tanto nos países de acollida como no desenvolvemento económico, educativo e social de Galicia.",
+    "projectTitle": "O proxecto: Escola Museo da Emigración",
+    "project": "Impulsamos a creación dun espazo de memoria e investigación centrado na emigración galega a América durante os séculos XIX e XX. Este centro integrará unha área de documentación e unha base de datos para a investigación histórica, xunto cun museo divulgativo deseñado para expoñer o legado cultural, as obras pías, as escolas e as iniciativas promovidas pola diáspora."
   },
   "viaje": {
     "title": "A aventura americana",
@@ -143,8 +125,6 @@
     ]
   },
   "coleccion": {
-    "title": "O que garda a maleta",
-    "lead": "Pezas da época que contarán a viaxe.",
     "items": [
       "Fotografías",
       "Maquetas",
@@ -158,33 +138,6 @@
   "casa": {
     "title": "A casa-museo",
     "lead": "Percorre o plano do recinto: cada espazo ten a súa ficha.",
-    "sectionsTitle": "Seccións da casa-museo",
-    "sections": [
-      {
-        "title": "Exposición",
-        "text": "Parte permanente e parte temporal: as etapas da viaxe a América, os países de acollida e os oficios. Galegos: As máns de América."
-      },
-      {
-        "title": "Biblioteca, arquivo especializado documental e sonoro",
-        "text": "En emigración galega a América: Biblioteca · Audioteca · Fototeca."
-      },
-      {
-        "title": "Sala de proxeccións inmersivas á carta",
-        "text": ""
-      },
-      {
-        "title": "Centro social do emigrante",
-        "text": "Con cafetaría, salón de reunións e lugar de encontro. O obxectivo deste espazo é promover, mediante a realización de eventos e actividades, o encontro entre emigrantes e toda aquela persoa que estea interesada no tema."
-      },
-      {
-        "title": "Libraría especializada",
-        "text": ""
-      },
-      {
-        "title": "Outras seccións",
-        "text": "Oficina."
-      }
-    ],
     "spaces": [
       {
         "id": "recepcion",
@@ -199,52 +152,52 @@
         "text": "Paneis ao longo do muro, co percorrido sinalizado con frechas."
       },
       {
-        "id": "sala",
-        "n": 3,
-        "title": "Sala principal de exposicións temporais",
-        "text": "Exposición con parte permanente e parte temporal: as etapas da viaxe a América, os países de acollida e os oficios. Galegos: As máns de América."
-      },
-      {
-        "id": "tienda",
-        "n": 4,
-        "title": "Tenda-libraría",
-        "text": "Libraría especializada."
-      },
-      {
         "id": "baja",
-        "n": 5,
+        "n": 3,
         "title": "Planta baixa: sala de proxeccións e arquivo bibliográfico",
         "text": "Sala de proxeccións inmersivas á carta e arquivo bibliográfico."
       },
       {
         "id": "alta",
-        "n": 6,
+        "n": 4,
         "title": "Planta alta: arquivo documental e sonoro",
         "text": "Arquivo especializado documental e sonoro en emigración galega a América: Biblioteca · Audioteca · Fototeca."
       },
       {
-        "id": "patio",
+        "id": "sala",
+        "n": 5,
+        "title": "Sala principal de exposicións temporais",
+        "text": "Exposición con parte permanente e parte temporal: as etapas da viaxe a América, os países de acollida e os oficios. Galegos: As máns de América."
+      },
+      {
+        "id": "aseo",
+        "n": 6,
+        "title": "Aseo",
+        "text": "Aseo."
+      },
+      {
+        "id": "tienda",
         "n": 7,
+        "title": "Tenda-libraría",
+        "text": "Libraría especializada."
+      },
+      {
+        "id": "patio",
+        "n": 8,
         "title": "Patio con carpa",
         "text": "Actividades e conferencias."
       },
       {
         "id": "cafeteria",
-        "n": 8,
+        "n": 9,
         "title": "Servizo de cafetaría",
-        "text": "Centro social do emigrante, con cafetaría, salón de reunións e lugar de encontro."
+        "text": "Centro social do emigrante, con cafetaría, salón de reunións e lugar de encontro. Realización de eventos e actividades, o encontro entre emigrantes e toda aquela persoa que estea interesada no tema."
       },
       {
         "id": "vivienda",
-        "n": 9,
+        "n": 10,
         "title": "Vivenda",
         "text": "Aloxamento turístico."
-      },
-      {
-        "id": "aseo",
-        "n": 10,
-        "title": "Aseo",
-        "text": "Aseo."
       }
     ]
   },
@@ -252,31 +205,6 @@
     "title": "Roteiro guiado por Gaxate",
     "text": "Un roteiro guiado pola aldea, con audioguía, contará aos visitantes a historia das casas e das familias, amosando todo o peculiar e anecdótico relacionado coa emigración e cos indianos de Gaxate, así como a vida dunha aldea de Galicia na primeira metade do século XX.",
     "cta": "Quero saber cando se inaugura"
-  },
-  "fundacion": {
-    "title": "Folla de ruta do proxecto",
-    "steps": [
-      {
-        "strong": "Constitución dunha fundación ou asociación cultural",
-        "rest": " de carácter benéfico de promoción."
-      },
-      {
-        "strong": "Aluguer das escolas do Castro",
-        "rest": " como sede do museo."
-      },
-      {
-        "strong": "Habilitación da escola como museo",
-        "rest": ": unha exposición sobre a AVENTURA AMERICANA baseada no libro Galegos: As máns de América, ademais dun arquivo, unha tenda especializada e un centro social."
-      },
-      {
-        "strong": "Constitución dun padroado",
-        "rest": " formado por membros de organismos colaboradores e privados."
-      },
-      {
-        "strong": "Creación dun roteiro guiado",
-        "rest": " pola aldea con audioguía."
-      }
-    ]
   },
   "form": {
     "title": "Proxecto – Fundación",
@@ -333,7 +261,6 @@
       "coleccion": "A maleta · material exposto",
       "casa": "A casa-museo · plano ilustrado",
       "ruta": "Roteiro guiado · audioguía",
-      "fundacion": "O proxecto e a fundación",
       "apoya": "Escríbenos · o sobre"
     },
     "art": {
@@ -347,7 +274,7 @@
       "viaje": "Ilustración: o transatlántico cruza o océano de esquerda a dereita mentres pasan detrás o peirao galego da despedida, a noite en alta mar, un porto americano con luz cálida, un gran hotel de emigrantes, o regreso entre a néboa e unha casa de indiano con galería branca e palmeira.",
       "viajeStop": "Ilustración da parada «{title}»",
       "coleccion": "Ilustración: unha gran maleta antiga de coiro con ferraxes de latón ábrese e dela saen voando etiquetas de viaxe cos materiais que se van expor.",
-      "casaPlan": "Plano ilustrado da casa-museo: recinto amurallado coa entrada e a recepción, paneis de exposición ao longo do muro, a escola coa sala principal, a tenda-libraría e a sala de proxeccións co arquivo bibliográfico, a planta alta co arquivo documental e sonoro, o patio con carpa, a cafetaría, a vivenda e o aseo. Unhas frechas marcan o percorrido.",
+      "casaPlan": "Plano ilustrado da casa-museo: recinto amurallado de planta irregular, co muro esquerdo en diagonal e o camiño por baixo. A recepción e a entrada están abaixo á dereita. Os paneis de exposición percorren o muro inferior e o muro esquerdo. O percorrido, marcado con frechas, sae da entrada cara á esquerda, sobe polo lado esquerdo, cruza por arriba e baixa cara aos edificios. No edificio da esquerda: arriba, a planta baixa coa sala de proxeccións e o arquivo bibliográfico, e a planta alta co arquivo documental e sonoro; debaixo, a sala principal de exposicións temporais; abaixo, o aseo á esquerda e a tenda-libraría á súa dereita. No centro, o patio con carpa. Á dereita, a vivenda de aloxamento turístico. Na fila inferior, o servizo de cafetaría.",
       "rutaMap": "Mapa ilustrado de Gaxate: un camiño punteado percorre a aldea entre prados, carballos e casas de indianos sinaladas con números.",
       "footerMap": "Ruta punteada que cruza o Atlántico dende Sudamérica e remata en Gaxate"
     },
@@ -358,8 +285,6 @@
       "amazon": "Amazonas"
     },
     "porque": {
-      "fileCard": "Ficha de arquivo",
-      "no": "N.º",
       "postmark": "CORREOS · ESPAÑA · AMÉRICA · "
     },
     "viaje": {
@@ -377,22 +302,12 @@
       "fileCard": "Ficha · espazo",
       "spacesLabel": "Espazos do recinto",
       "entrance": "ENTRADA",
-      "upperFloor": "PLANTA ALTA ↑"
+      "upperFloor": "PLANTA ALTA ↑",
+      "wall": "MURO",
+      "road": "CAMIÑO"
     },
     "ruta": {
       "parish": "PARROQUIA DE GAXATE · A LAMA"
-    },
-    "fundacion": {
-      "register": "Libro de rexistro",
-      "step": "Paso",
-      "stampStep": "PASO",
-      "stamps": [
-        "FUNDACIÓN",
-        "SEDE",
-        "MUSEO",
-        "PADROADO",
-        "ROTEIRO"
-      ]
     },
     "form": {
       "optional": "(opcional)",

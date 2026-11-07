@@ -46,10 +46,6 @@
       "label": "Guided walk through Gaxate"
     },
     {
-      "id": "fundacion",
-      "label": "The project and the foundation"
-    },
-    {
       "id": "apoya",
       "label": "Write to us"
     }
@@ -76,23 +72,7 @@
   "porque": {
     "quoteBefore": "Despite the importance this phenomenon has had in our society, ",
     "quoteStrong": "there is currently no archive or museum in Galicia devoted to emigration that explains, in an educational way, how it came about",
-    "quoteAfter": " — a defining chapter of our recent history.",
-    "text": "A fundamental task, and the main aim of this project, is to raise public awareness of the need to preserve our ethnographic heritage linked to emigration, much of which is still in private hands and faces an uncertain future. The project also aims to run activities that highlight the value of Galician emigration.",
-    "subtitle": "Our reasons",
-    "motivations": [
-      {
-        "title": "Gaxate's character",
-        "text": "A clear and unique example of an indiano architectural ensemble in Galicia."
-      },
-      {
-        "title": "The setting",
-        "text": "An area where the vast majority of the population emigrated to the Americas in the early 20th century, and where many of the buildings are indiano houses."
-      },
-      {
-        "title": "Bringing the area to life",
-        "text": "A cultural visitor attraction of this kind would revitalise the area, and would also create jobs and wealth locally."
-      }
-    ]
+    "quoteAfter": " — a defining chapter of our recent history."
   },
   "propuesta": {
     "proposalTitle": "Proposal",
@@ -102,9 +82,11 @@
       "To promote and encourage activities aimed at establishing a documentation centre on emigration, building a broad database that can in turn support many kinds of research on emigration to the Americas in the 19th and 20th centuries.",
       "To create a museum with a strong public-outreach role, presenting the values and contribution of Galician emigrants to the building and development of their host countries, and to the progress of Galicia itself through the founding of schools, foundations, charitable works, colleges, businesses and a long list of initiatives that drove development in the regions they had left."
     ],
-    "bookNoteBefore": "The exhibition on the AMERICAN ADVENTURE will be based on the book ",
-    "bookNoteAfter": ", which features some of Gaxate's indianos, among others.",
-    "sign": "Escola Museo da Emigración"
+    "sign": "Escola Museo da Emigración",
+    "missionTitle": "Our mission: conservation and awareness",
+    "mission": "To raise society's awareness of the importance of preserving and protecting the ethnographic heritage of Galician emigration, which in many cases is kept in private collections. We seek to make visible the transformative impact of migrant generations, recognising their valuable contribution both in the host countries and to the economic, educational and social development of Galicia.",
+    "projectTitle": "The project: Escola Museo da Emigración",
+    "project": "We are working to create a space for memory and research centred on Galician emigration to the Americas during the 19th and 20th centuries. This centre will bring together a documentation area and a database for historical research, alongside a public-facing museum designed to present the cultural legacy, the charitable works, the schools and the initiatives promoted by the diaspora."
   },
   "viaje": {
     "title": "The American adventure",
@@ -143,8 +125,6 @@
     ]
   },
   "coleccion": {
-    "title": "What the suitcase holds",
-    "lead": "Period pieces that will tell the story of the voyage.",
     "items": [
       "Photographs",
       "Models",
@@ -158,33 +138,6 @@
   "casa": {
     "title": "The house-museum",
     "lead": "Explore the site plan: each space has its own record card.",
-    "sectionsTitle": "Sections of the house-museum",
-    "sections": [
-      {
-        "title": "Exhibition",
-        "text": "A permanent section and a temporary one: the stages of the voyage to the Americas, the host countries and the trades. Galegos: As máns de América."
-      },
-      {
-        "title": "Library and specialist documentary and sound archive",
-        "text": "On Galician emigration to the Americas: Library · Sound archive · Photo archive."
-      },
-      {
-        "title": "On-demand immersive screening room",
-        "text": ""
-      },
-      {
-        "title": "Emigrants' social centre",
-        "text": "With a café, a meeting room and a place to gather. This space aims to bring together emigrants and anyone interested in the subject through events and activities."
-      },
-      {
-        "title": "Specialist bookshop",
-        "text": ""
-      },
-      {
-        "title": "Other sections",
-        "text": "Office."
-      }
-    ],
     "spaces": [
       {
         "id": "recepcion",
@@ -199,52 +152,52 @@
         "text": "Panels along the wall, with the route signposted with arrows."
       },
       {
-        "id": "sala",
-        "n": 3,
-        "title": "Main temporary exhibition hall",
-        "text": "An exhibition with a permanent section and a temporary one: the stages of the voyage to the Americas, the host countries and the trades. Galegos: As máns de América."
-      },
-      {
-        "id": "tienda",
-        "n": 4,
-        "title": "Shop and bookshop",
-        "text": "Specialist bookshop."
-      },
-      {
         "id": "baja",
-        "n": 5,
+        "n": 3,
         "title": "Ground floor: screening room and book archive",
         "text": "On-demand immersive screening room and book archive."
       },
       {
         "id": "alta",
-        "n": 6,
+        "n": 4,
         "title": "Upper floor: documentary and sound archive",
         "text": "Specialist documentary and sound archive on Galician emigration to the Americas: Library · Sound archive · Photo archive."
       },
       {
-        "id": "patio",
+        "id": "sala",
+        "n": 5,
+        "title": "Main temporary exhibition hall",
+        "text": "An exhibition with a permanent section and a temporary one: the stages of the voyage to the Americas, the host countries and the trades. Galegos: As máns de América."
+      },
+      {
+        "id": "aseo",
+        "n": 6,
+        "title": "Toilets",
+        "text": "Toilets."
+      },
+      {
+        "id": "tienda",
         "n": 7,
+        "title": "Shop and bookshop",
+        "text": "Specialist bookshop."
+      },
+      {
+        "id": "patio",
+        "n": 8,
         "title": "Courtyard with marquee",
         "text": "Activities and talks."
       },
       {
         "id": "cafeteria",
-        "n": 8,
+        "n": 9,
         "title": "Café",
-        "text": "Emigrants' social centre, with a café, a meeting room and a place to gather."
+        "text": "Emigrants' social centre, with a café, a meeting room and a place to gather. Running events and activities, and bringing together emigrants and anyone interested in the subject."
       },
       {
         "id": "vivienda",
-        "n": 9,
+        "n": 10,
         "title": "Living quarters",
         "text": "Tourist accommodation."
-      },
-      {
-        "id": "aseo",
-        "n": 10,
-        "title": "Toilets",
-        "text": "Toilets."
       }
     ]
   },
@@ -252,31 +205,6 @@
     "title": "Guided walk through Gaxate",
     "text": "A guided walk through the village, with an audio guide, will tell visitors the story of its houses and families, bringing out everything distinctive and anecdotal about emigration and Gaxate's indianos, as well as the life of a Galician village in the first half of the 20th century.",
     "cta": "Tell me when it opens"
-  },
-  "fundacion": {
-    "title": "Project roadmap",
-    "steps": [
-      {
-        "strong": "Setting up a foundation or cultural association",
-        "rest": " for charitable and promotional purposes."
-      },
-      {
-        "strong": "Renting the Castro schools",
-        "rest": " as the museum's home."
-      },
-      {
-        "strong": "Fitting out the school as a museum",
-        "rest": ": an exhibition on the AMERICAN ADVENTURE based on the book Galegos: As máns de América, together with an archive, a specialist shop and a social centre."
-      },
-      {
-        "strong": "Forming a board of trustees",
-        "rest": " made up of members of partner and private organisations."
-      },
-      {
-        "strong": "Creating a guided walk",
-        "rest": " through the village with an audio guide."
-      }
-    ]
   },
   "form": {
     "title": "Project – Foundation",
@@ -333,7 +261,6 @@
       "coleccion": "The suitcase · what will be on display",
       "casa": "The house-museum · illustrated plan",
       "ruta": "Guided walk · audio guide",
-      "fundacion": "The project and the foundation",
       "apoya": "Write to us · the envelope"
     },
     "art": {
@@ -347,7 +274,7 @@
       "viaje": "Illustration: the ocean liner crosses the sea from left to right while, behind it, we pass the Galician quay of farewell, night on the open sea, a warmly lit American port, a large emigrant hotel, the return through the fog and an indiano house with a white gallery and a palm tree.",
       "viajeStop": "Illustration for the stop “{title}”",
       "coleccion": "Illustration: a large old leather suitcase with brass fittings opens, and travel labels naming the materials to be exhibited fly out of it.",
-      "casaPlan": "Illustrated plan of the house-museum: a walled site with the entrance and reception, exhibition panels along the wall, the school with the main hall, the shop and bookshop and the screening room with the book archive, the upper floor with the documentary and sound archive, the courtyard with a marquee, the café, the living quarters and the toilets. Arrows mark the route.",
+      "casaPlan": "Illustrated plan of the house-museum: an irregular walled plot, with a slanted left wall and the road along the bottom. Reception and the entrance are at the bottom right. Exhibition panels run along the bottom wall and the slanted left wall. The route, marked with arrows, leaves the entrance towards the left, goes up the left side, crosses the top and comes down into the buildings. In the left building: at the top, the ground floor with the screening room and the book archive, and the upper floor with the documentary and sound archive; below that, the main temporary-exhibition hall; at the bottom, the toilets on the left and the shop and bookshop to their right. In the centre, the courtyard with a marquee. On the right, the tourist accommodation. Along the bottom row, the café.",
       "rutaMap": "Illustrated map of Gaxate: a dotted path runs through the village between meadows, oak trees and numbered indiano houses.",
       "footerMap": "Dotted route crossing the Atlantic from South America and ending in Gaxate"
     },
@@ -358,8 +285,6 @@
       "amazon": "Amazon"
     },
     "porque": {
-      "fileCard": "Archive record",
-      "no": "No.",
       "postmark": "CORREOS · SPAIN · AMERICA · "
     },
     "viaje": {
@@ -377,22 +302,12 @@
       "fileCard": "Record · space",
       "spacesLabel": "Spaces on the site",
       "entrance": "ENTRANCE",
-      "upperFloor": "UPPER FLOOR ↑"
+      "upperFloor": "UPPER FLOOR ↑",
+      "wall": "WALL",
+      "road": "ROAD"
     },
     "ruta": {
       "parish": "PARISH OF GAXATE · A LAMA"
-    },
-    "fundacion": {
-      "register": "Register",
-      "step": "Step",
-      "stampStep": "STEP",
-      "stamps": [
-        "FOUNDATION",
-        "HOME",
-        "MUSEUM",
-        "TRUSTEES",
-        "WALK"
-      ]
     },
     "form": {
       "optional": "(optional)",

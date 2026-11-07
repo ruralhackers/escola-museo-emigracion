@@ -86,11 +86,10 @@ function Quote({ p, full }: { p: MotionValue<number>; full: boolean }) {
   const o = useTransform(p, [0.3, 0.5], full ? [0, 1] : [1, 1])
   const s = useTransform(p, [0.3, 0.55], full ? [0.92, 1] : [1, 1])
   return (
-    <motion.blockquote style={{ opacity: o, scale: s }} className={`paper-card relative mx-auto max-w-4xl px-6 py-8 sm:px-12 sm:py-10 ${full ? '' : 'mt-0'}`}>
-      <span aria-hidden="true" className="absolute -left-2 -top-8 font-display text-[7rem] leading-none text-stamp/70">“</span>
-      <p className="font-display text-[clamp(1.25rem,2.3vw,2.15rem)] leading-snug">
+    <motion.blockquote style={{ opacity: o, scale: s }} className={`paper-card relative mx-auto max-w-3xl px-6 py-6 sm:px-8 sm:py-7 ${full ? '' : 'mt-0'}`}>
+      <p className="leading-[1.6]">
         {t.quoteBefore}
-        <strong className="bg-[linear-gradient(transparent_62%,rgba(181,53,43,.28)_62%)] font-bold">{t.quoteStrong}</strong>
+        <strong className="font-bold">{t.quoteStrong}</strong>
         {t.quoteAfter}
       </p>
     </motion.blockquote>
@@ -108,7 +107,6 @@ export function S04PorQue() {
   const full = mode === 'full'
   const p = useSceneProgress(ref as any)
   const all = useT()
-  const t = all.porque
   const label = all.ui.art.porque
 
   return (
@@ -125,7 +123,7 @@ export function S04PorQue() {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="pb-16">
               <div role="img" aria-label={label} className="relative aspect-[4/3] w-full overflow-hidden sm:aspect-[16/10]" style={tableBg}>
                 <Scattered p={p} scatter={false} />
               </div>
@@ -136,29 +134,6 @@ export function S04PorQue() {
               </div>
             </div>
           )}
-        </div>
-
-        <div className="mx-auto max-w-6xl px-5 pb-24 pt-16 sm:px-8">
-          <Reveal className="mx-auto max-w-3xl text-[1.08rem]">
-            <p>{t.text}</p>
-          </Reveal>
-          <Reveal className="mt-16 text-center">
-            <h3 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-bold">{t.subtitle}</h3>
-          </Reveal>
-          <ol className="mt-10 grid gap-8 md:grid-cols-3">
-            {t.motivations.map((m, i) => (
-              <Reveal as="li" key={m.title} delay={i * 0.15} y={50}>
-                <article className="relative h-full border border-ocean/30 bg-[#FBF6EA] p-6 shadow-[6px_8px_0_rgba(30,27,24,.12)]" style={{ transform: `rotate(${[-1.5, 1, -0.6][i]}deg)`, backgroundImage: 'repeating-linear-gradient(transparent 0 27px, rgba(31,78,107,.14) 27px 28px)', backgroundPosition: '0 52px' }}>
-                  <div className="absolute inset-x-0 top-[44px] h-[2px] bg-stamp/60" aria-hidden="true" />
-                  <p className="flex items-center justify-between font-type text-xs uppercase tracking-[0.2em] text-ocean">
-                    <span>{all.ui.porque.fileCard}</span><span>{all.ui.porque.no} {String(i + 1).padStart(3, '0')}</span>
-                  </p>
-                  <h4 className="mt-7 font-display text-xl font-bold leading-snug">{m.title}</h4>
-                  <p className="mt-3 leading-[28px]">{m.text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </ol>
         </div>
       </section>
     </SceneCtxProvider>

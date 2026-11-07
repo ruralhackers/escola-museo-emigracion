@@ -28,16 +28,15 @@ function BookCover({ small = false }: { small?: boolean }) {
 }
 
 function LeftPage() {
-  const all = useT()
-  const t = all.propuesta
-  const motto = all.identity.motto
+  const t = useT().propuesta
   return (
-      <div className="relative h-full bg-[#FBF6EA] px-6 py-8 sm:px-10 sm:py-10" style={{ boxShadow: 'inset -18px 0 30px -20px rgba(0,0,0,.35)' }}>
+      <div className="relative h-full bg-[#FBF6EA] px-6 pb-12 pt-8 sm:px-10 sm:pb-14 sm:pt-10" style={{ boxShadow: 'inset -18px 0 30px -20px rgba(0,0,0,.35)' }}>
         <h3 className="font-display text-2xl font-bold text-stamp">{t.proposalTitle}</h3>
         <p className="mt-3 text-[1.02rem]">{t.proposal}</p>
-        <p className="mt-6 border-t border-ink/15 pt-5 text-[0.98rem] italic text-ink/85">
-          {t.bookNoteBefore}<cite lang="gl">{motto}</cite>{t.bookNoteAfter}
-        </p>
+        <h3 className="mt-6 font-display text-2xl font-bold text-stamp">{t.missionTitle}</h3>
+        <p className="mt-3 text-[1.02rem]">{t.mission}</p>
+        <h3 className="mt-6 font-display text-2xl font-bold text-stamp">{t.projectTitle}</h3>
+        <p className="mt-3 text-[1.02rem]">{t.project}</p>
         <p className="absolute bottom-3 left-0 right-0 text-center font-type text-xs text-ink/50" aria-hidden="true">— i —</p>
       </div>
   )
