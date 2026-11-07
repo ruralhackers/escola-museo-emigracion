@@ -238,7 +238,7 @@ export function S11Apoya() {
 
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6" ref={scope} style={{ perspective: 1400 }}>
           <div className="mb-8 text-center">
-            <div className="flex justify-center"><Kicker n={11}>{c.ui.kickers.apoya}</Kicker></div>
+            <div className="flex justify-center"><Kicker n={10}>{c.ui.kickers.apoya}</Kicker></div>
             <h2 id="apoya-title" className="font-display text-[clamp(1.9rem,3.6vw,3.2rem)] font-bold leading-tight">
               {f.title}
               <span className="block text-[0.6em] font-normal italic text-ocean">{f.subtitle}</span>

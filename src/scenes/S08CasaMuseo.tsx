@@ -1,76 +1,127 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValueEvent, type MotionValue } from 'framer-motion'
 import { C, smoothPath } from '../art/palette'
-import { Reveal, SceneCtxProvider } from '../components/Scene'
+import { SceneCtxProvider } from '../components/Scene'
 import { Kicker } from '../components/Card'
 import { useMotionMode } from '../lib/motion'
 import { useSceneProgress } from '../lib/useSceneProgress'
 import { useT } from '../lib/i18n'
 
 type Rect = [number, number, number, number]
+type Pt = [number, number]
 
-// plan geometry (viewBox 1000×700) — illustrative layout of the spaces listed in the project
-const ROOMS: Record<string, { r: Rect; fill: string; way: [number, number] }> = {
-  recepcion: { r: [60, 560, 200, 90], fill: C.tropicLight, way: [160, 605] },
-  paneles: { r: [36, 410, 34, 140], fill: C.paperDark, way: [92, 470] },
-  sala: { r: [60, 90, 270, 310], fill: C.paper, way: [195, 245] },
-  tienda: { r: [330, 260, 190, 140], fill: C.tropicLight, way: [425, 330] },
-  baja: { r: [330, 90, 190, 170], fill: C.fogLight, way: [425, 175] },
-  alta: { r: [570, 56, 370, 170], fill: C.fog, way: [755, 140] },
-  patio: { r: [570, 262, 370, 260], fill: C.mossLight, way: [755, 392] },
-  cafeteria: { r: [300, 460, 220, 190], fill: C.paperDark, way: [410, 555] },
-  vivienda: { r: [570, 560, 230, 90], fill: C.paper, way: [685, 605] },
-  aseo: { r: [820, 560, 120, 90], fill: C.fogLight, way: [880, 605] },
+const VB = { w: 1000, h: 740 }
+
+// Illustrated plan matched to the project drawing: irregular plot, slanted left wall,
+// road along the bottom, reception at the bottom right, panels on the bottom and left walls.
+const ROOMS: Record<string, { r: Rect; fill: string; dash?: boolean }> = {
+  recepcion: { r: [788, 524, 168, 72], fill: C.tropicLight },
+  paneles: { r: [145, 498, 270, 92], fill: C.paperDark },
+  baja: { r: [258, 128, 142, 96], fill: C.fogLight },
+  alta: { r: [400, 128, 152, 96], fill: C.fog, dash: true },
+  sala: { r: [258, 224, 294, 158], fill: C.paper },
+  aseo: { r: [258, 382, 96, 74], fill: C.fogLight },
+  tienda: { r: [354, 382, 198, 74], fill: C.tropicLight },
+  patio: { r: [518, 122, 214, 248], fill: C.mossLight },
+  cafeteria: { r: [518, 382, 168, 88], fill: C.paperDark },
+  vivienda: { r: [748, 118, 188, 248], fill: C.tropic },
 }
-const ORDER = Object.keys(ROOMS) // same order as the spaces in the content files
-const ROUTE_PTS: [number, number][] = [[170, 700], ...ORDER.map((id) => ROOMS[id].way)]
-const ROUTE = smoothPath(ROUTE_PTS, false, 0.4)
+
+// Visit order follows the arrows: entrance, west along the bottom, up the left wall,
+// across the top, then down into the buildings.
+const ROUTE_PTS: Pt[] = [
+  [872, 560],
+  [700, 548],
+  [480, 542],
+  [280, 540],
+  [155, 455],
+  [185, 280],
+  [230, 130],
+  [340, 96],
+  [329, 176],
+  [476, 176],
+  [405, 303],
+  [306, 419],
+  [453, 419],
+  [625, 246],
+  [602, 426],
+  [842, 242],
+]
+const VISIT: { id: string; i: number }[] = [
+  { id: 'recepcion', i: 0 },
+  { id: 'paneles', i: 3 },
+  { id: 'baja', i: 8 },
+  { id: 'alta', i: 9 },
+  { id: 'sala', i: 10 },
+  { id: 'aseo', i: 11 },
+  { id: 'tienda', i: 12 },
+  { id: 'patio', i: 13 },
+  { id: 'cafeteria', i: 14 },
+  { id: 'vivienda', i: 15 },
+]
+const ROUTE = smoothPath(ROUTE_PTS, false, 0.35)
+
+function roomAt(v: number) {
+  const idx = Math.round(Math.max(0, Math.min(1, v)) * (ROUTE_PTS.length - 1))
+  let id = VISIT[0].id
+  for (const step of VISIT) if (step.i <= idx) id = step.id
+  return id
+}
+
+function panelsAlong(a: Pt, b: Pt, n: number, inset: number) {
+  const dx = b[0] - a[0], dy = b[1] - a[1]
+  const L = Math.hypot(dx, dy) || 1
+  const ux = dx / L, uy = dy / L
+  const nx = uy, ny = -ux
+  const ang = (Math.atan2(dy, dx) * 180) / Math.PI
+  return Array.from({ length: n }, (_, i) => {
+    const t = (i + 0.6) / (n + 0.3)
+    return { x: a[0] + dx * t + nx * inset, y: a[1] + dy * t + ny * inset, ang }
+  })
+}
 
 function PlanArt({ active }: { active: string }) {
   const u = useT().ui
+  const leftPanels = panelsAlong([236, 118], [78, 612], 8, 26)
+  const bottomPanels = panelsAlong([110, 628], [760, 586], 8, 24)
   return (
     <g>
-      {/* ground & perimeter wall */}
-      <rect x="0" y="0" width="1000" height="700" fill={C.mossLight} opacity=".45" />
-      <path d="M120 670 H30 V30 H970 V670 H220" fill="none" stroke={C.stoneDark} strokeWidth="14" strokeLinejoin="round" />
-      <g fill={C.stone}>{Array.from({ length: 40 }).map((_, i) => <rect key={i} x={30 + i * 24} y="24" width="16" height="12" rx="2" />)}</g>
-      {/* exhibition panels along the wall */}
+      <path d="M248 108 L952 86 L974 560 L58 632 Z" fill={C.mossLight} opacity=".55" />
+      {/* lower floor plate, hatched like the project plan */}
+      <path d="M258 382 H936 V548 L168 590 Z" fill="url(#plan-hatch)" />
+      <path d="M248 108 L58 632 L748 584" fill="none" stroke={C.stoneDark} strokeWidth="16" strokeLinejoin="round" strokeLinecap="butt" />
+      <path d="M868 576 L974 560 L952 86 L248 108" fill="none" stroke={C.stoneDark} strokeWidth="16" strokeLinejoin="round" strokeLinecap="butt" />
+      <g fill={C.stone}>{Array.from({ length: 28 }).map((_, i) => <rect key={i} x={250 + i * 24} y="74" width="16" height="12" rx="2" />)}</g>
+      {/* building mass on the right, under and beside the lodging */}
+      <path d="M748 382 H936 V530 L686 548 V470 H748 Z" fill={C.paperDark} stroke={C.ink} strokeWidth="4" />
+      <path d="M836 382 V530 M748 456 H836" fill="none" stroke={C.ink} strokeWidth="3" />
+      {/* exhibition panels along the slanted left wall and the bottom wall */}
       <g fill={C.ocean}>
-        {Array.from({ length: 4 }).map((_, i) => <rect key={`l${i}`} x="40" y={420 + i * 34} width="10" height="26" />)}
-        {Array.from({ length: 7 }).map((_, i) => <rect key={`t${i}`} x={80 + i * 64} y="42" width="44" height="10" />)}
-        {Array.from({ length: 5 }).map((_, i) => <rect key={`r${i}`} x="950" y={260 + i * 52} width="10" height="36" />)}
+        {[...leftPanels, ...bottomPanels].map((p, i) => (
+          <rect key={i} x={-15} y={-5} width="30" height="10" transform={`translate(${p.x} ${p.y}) rotate(${p.ang})`} />
+        ))}
       </g>
-      {/* rooms */}
-      {Object.entries(ROOMS).map(([id, { r, fill }]) => (
+      {Object.entries(ROOMS).map(([id, { r, fill, dash }]) => (
         <g key={id}>
-          <rect x={r[0]} y={r[1]} width={r[2]} height={r[3]} fill={fill} stroke={C.ink} strokeWidth={id === 'alta' ? 3 : 5} strokeDasharray={id === 'alta' ? '12 8' : undefined} />
+          {id !== 'paneles' && <rect x={r[0]} y={r[1]} width={r[2]} height={r[3]} fill={fill} stroke={C.ink} strokeWidth={dash ? 3 : 5} strokeDasharray={dash ? '10 7' : undefined} />}
           {active === id && <rect className="pulse-soft" x={r[0] + 6} y={r[1] + 6} width={r[2] - 12} height={r[3] - 12} fill="none" stroke={C.stamp} strokeWidth="6" />}
         </g>
       ))}
-      {/* school building roof hatch & stairs to the upper floor */}
-      <path d="M330 90 V400" stroke={C.ink} strokeWidth="5" />
-      <g stroke={C.ink} strokeWidth="2">{Array.from({ length: 6 }).map((_, i) => <line key={i} x1={490} y1={110 + i * 10} x2={515} y2={110 + i * 10} />)}</g>
-      <path d="M515 100 C560 90 560 120 570 120" stroke={C.ink} strokeWidth="2" strokeDasharray="5 5" fill="none" />
-      {/* furniture hints */}
-      <g fill={C.rust} opacity=".75">
-        {[100, 160, 220, 280].map((x) => <rect key={x} x={x} y="140" width="30" height="8" />)}
-        {[100, 160, 220, 280].map((x) => <rect key={`b${x}`} x={x} y="350" width="30" height="8" />)}
-        <rect x="350" y="290" width="150" height="10" /><rect x="350" y="360" width="150" height="10" />
-        {[600, 650, 700, 750, 800, 850, 900].map((x) => <rect key={`a${x}`} x={x} y="76" width="10" height="120" />)}
+      {/* screen and shelves in the archives; stairs up to the dashed upper floor */}
+      <rect x="286" y="150" width="86" height="48" fill={C.ink} />
+      <g fill={C.paper}>{[292, 312, 332, 352].map((x) => <rect key={x} x={x} y="206" width="12" height="12" rx="2" />)}</g>
+      <g fill={C.rust} opacity=".8">{[418, 446, 474, 502].map((x) => <rect key={x} x={x} y="148" width="8" height="58" />)}</g>
+      <g stroke={C.ink} strokeWidth="2">{Array.from({ length: 5 }).map((_, i) => <line key={i} x1="388" y1={146 + i * 8} x2="408" y2={146 + i * 8} />)}</g>
+      {/* rows of seats in the main hall */}
+      <g fill={C.rust} opacity=".7">{[280, 340, 400, 460].map((x) => <rect key={x} x={x} y="268" width="42" height="8" />)}{[280, 340, 400, 460].map((x) => <rect key={`b${x}`} x={x} y="340" width="42" height="8" />)}</g>
+      {/* marquee in the courtyard */}
+      <g transform="translate(625 246)">
+        <polygon points="0,-78 55,-55 78,0 55,55 0,78 -55,55 -78,0 -55,-55" fill={C.white} stroke={C.ink} strokeWidth="3" />
+        <g stroke={C.stamp} strokeWidth="2">{[0, 45, 90, 135].map((a) => <line key={a} x1={-78 * Math.cos((a * Math.PI) / 180)} y1={-78 * Math.sin((a * Math.PI) / 180)} x2={78 * Math.cos((a * Math.PI) / 180)} y2={78 * Math.sin((a * Math.PI) / 180)} />)}</g>
+        <circle r="7" fill={C.stamp} />
       </g>
-      <rect x="360" y="110" width="130" height="60" fill={C.ink} />
-      <g fill={C.paper}>{[370, 395, 420, 445, 470].map((x) => <rect key={x} x={x} y="190" width="14" height="14" rx="3" />)}</g>
-      {/* tent in the patio */}
-      <g transform="translate(755 392)">
-        <polygon points="0,-100 71,-71 100,0 71,71 0,100 -71,71 -100,0 -71,-71" fill={C.white} stroke={C.ink} strokeWidth="3" />
-        <g stroke={C.stamp} strokeWidth="2">{[0, 45, 90, 135].map((a) => <line key={a} x1={-100 * Math.cos((a * Math.PI) / 180)} y1={-100 * Math.sin((a * Math.PI) / 180)} x2={100 * Math.cos((a * Math.PI) / 180)} y2={100 * Math.sin((a * Math.PI) / 180)} />)}</g>
-        <circle r="8" fill={C.stamp} />
-      </g>
-      {/* café tables */}
-      <g fill={C.white} stroke={C.ink} strokeWidth="2">{[[350, 520], [430, 510], [370, 600], [460, 600]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r="18" />)}</g>
-      {/* trees in the garden */}
-      <g fill={C.moss}>{[[545, 245], [545, 540], [960, 540], [280, 440]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r="14" />)}</g>
-      {/* route with arrows */}
+      <g fill={C.white} stroke={C.ink} strokeWidth="2">{[[560, 418], [640, 430], [575, 448]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r="12" />)}</g>
+      <g fill={C.moss}>{[[200, 400], [700, 200], [900, 340]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r="12" />)}</g>
       <path d={ROUTE} fill="none" stroke={C.stamp} strokeWidth="4" strokeDasharray="2 12" strokeLinecap="round" />
       {ROUTE_PTS.slice(0, -1).map((a, i) => {
         const b = ROUTE_PTS[i + 1]
@@ -78,14 +129,26 @@ function PlanArt({ active }: { active: string }) {
         const ang = (Math.atan2(b[1] - a[1], b[0] - a[0]) * 180) / Math.PI
         return <path key={i} d="M-9 -8 L7 0 L-9 8" transform={`translate(${mx} ${my}) rotate(${ang})`} fill="none" stroke={C.stamp} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
       })}
-      <text x="170" y="694" textAnchor="middle" fontFamily="Special Elite, monospace" fontSize="16" fill={C.ink}>{u.casa.entrance}</text>
-      <text x="930" y="250" textAnchor="end" fontFamily="Special Elite, monospace" fontSize="14" fill={C.ink}>{u.casa.upperFloor}</text>
+      <g transform="translate(818 600)" stroke={C.stamp} strokeWidth="4" strokeLinecap="round">
+        <line x1="-12" y1="0" x2="12" y2="0" /><line x1="0" y1="-12" x2="0" y2="12" />
+      </g>
+      <text x="860" y="632" textAnchor="middle" fontFamily="Special Elite, monospace" fontSize="13" fill={C.ink}>{u.casa.entrance}</text>
+      <text x="476" y="214" textAnchor="middle" fontFamily="Special Elite, monospace" fontSize="11" fill={C.ink}>{u.casa.upperFloor}</text>
+      <text x="600" y="68" textAnchor="middle" fontFamily="Special Elite, monospace" fontSize="13" fill={C.inkSoft}>{u.casa.wall}</text>
+      <text x="990" y="340" textAnchor="middle" fontFamily="Special Elite, monospace" fontSize="13" fill={C.inkSoft} transform="rotate(90 990 340)">{u.casa.wall}</text>
+      <text fontFamily="Special Elite, monospace" fontSize="13" fill={C.inkSoft} transform="translate(118 390) rotate(-72)">{u.casa.wall}</text>
+      <path id="plan-road" d="M30 700 L980 648" fill="none" />
+      <text fontFamily="Special Elite, monospace" fontSize="16" fill={C.ink} letterSpacing="8">
+        <textPath href="#plan-road" startOffset="18%">{u.casa.road}</textPath>
+      </text>
+      <path d="M24 688 L990 632" fill="none" stroke={C.ink} strokeWidth="2.5" />
+      <path d="M24 706 L990 650" fill="none" stroke={C.ink} strokeWidth="1" opacity=".35" />
     </g>
   )
 }
 
 function Walker({ p, pathRef }: { p: MotionValue<number>; pathRef: React.RefObject<SVGPathElement | null> }) {
-  const [pos, setPos] = useState<[number, number]>([170, 700])
+  const [pos, setPos] = useState<[number, number]>(ROUTE_PTS[0])
   const update = (v: number) => {
     const el = pathRef.current
     if (!el) return
@@ -112,8 +175,13 @@ function Plan({ p, active, onPick, picked }: { p: MotionValue<number>; active: s
   const t = all.casa
   const shown = picked ?? active
   return (
-    <div className="relative aspect-[1000/700] w-full overflow-hidden border-[6px] border-white bg-paper shadow-[10px_12px_0_rgba(30,27,24,.15)]">
-      <svg viewBox="0 0 1000 700" className="absolute inset-0 h-full w-full" role="img" aria-label={all.ui.art.casaPlan}>
+    <div className="relative aspect-[1000/740] w-full overflow-hidden border-[6px] border-white bg-paper shadow-[10px_12px_0_rgba(30,27,24,.15)]">
+      <svg viewBox={`0 0 ${VB.w} ${VB.h}`} className="absolute inset-0 h-full w-full" role="img" aria-label={all.ui.art.casaPlan}>
+        <defs>
+          <pattern id="plan-hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(32)">
+            <line x1="0" y1="0" x2="0" y2="14" stroke={C.rust} strokeOpacity="0.35" strokeWidth="2" />
+          </pattern>
+        </defs>
         <PlanArt active={shown} />
         <path ref={pathRef} d={ROUTE} fill="none" stroke="none" />
         <Walker p={p} pathRef={pathRef} />
@@ -130,7 +198,7 @@ function Plan({ p, active, onPick, picked }: { p: MotionValue<number>; active: s
             aria-controls="ficha-casa"
             aria-label={`${s.n}. ${s.title}`}
             className={`absolute grid place-items-start p-1 text-left transition-colors ${on ? 'bg-stamp/10' : 'hover:bg-ink/5'}`}
-            style={{ left: `${(r[0] / 1000) * 100}%`, top: `${(r[1] / 700) * 100}%`, width: `${(r[2] / 1000) * 100}%`, height: `${(r[3] / 700) * 100}%` }}
+            style={{ left: `${(r[0] / VB.w) * 100}%`, top: `${(r[1] / VB.h) * 100}%`, width: `${(r[2] / VB.w) * 100}%`, height: `${(r[3] / VB.h) * 100}%` }}
           >
             <span className={`grid h-6 w-6 place-items-center rounded-full font-type text-xs sm:h-7 sm:w-7 ${on ? 'bg-stamp text-white' : 'bg-ink text-paper'}`}>{s.n}</span>
           </button>
@@ -169,12 +237,12 @@ export function S08CasaMuseo() {
   const { mode } = useMotionMode()
   const full = mode === 'full'
   const p = useSceneProgress(ref as any, { offset: full ? ['start start', 'end end'] : undefined, duration: 6 })
-  const [active, setActive] = useState(ORDER[0])
+  const [active, setActive] = useState(VISIT[0].id)
   const [picked, setPicked] = useState<string | null>(null)
   useMotionValueEvent(p, 'change', (v) => {
     if (!full) return
-    const i = Math.min(ORDER.length - 1, Math.max(0, Math.round(v * (ROUTE_PTS.length - 1)) - 1))
-    if (ORDER[i] !== active) { setActive(ORDER[i]); setPicked(null) }
+    const id = roomAt(v)
+    if (id !== active) { setActive(id); setPicked(null) }
   })
   const all = useT()
   const t = all.casa
@@ -193,7 +261,7 @@ export function S08CasaMuseo() {
           {full ? (
             <div className="sticky top-0 flex h-[100svh] min-h-[640px] items-center overflow-hidden px-[5vw] pt-16">
               <div className="grid w-full grid-cols-[minmax(0,1.65fr)_minmax(280px,1fr)] items-center gap-[4vw]">
-                <div className="mx-auto w-full" style={{ maxWidth: 'calc((100svh - 140px) * 1000 / 700)' }}>
+                <div className="mx-auto w-full" style={{ maxWidth: 'calc((100svh - 140px) * 1000 / 740)' }}>
                   <Plan p={p} active={active} picked={picked} onPick={setPicked} />
                 </div>
                 <div>
@@ -216,19 +284,6 @@ export function S08CasaMuseo() {
               <div className="mx-auto mt-6 max-w-2xl"><Ficha id={picked ?? active} /></div>
             </div>
           )}
-        </div>
-        <div className="mx-auto max-w-6xl px-5 pb-24 pt-12 sm:px-8">
-          <Reveal><h3 className="text-center font-display text-[clamp(1.6rem,2.6vw,2.3rem)] font-bold">{t.sectionsTitle}</h3></Reveal>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {t.sections.map((s, i) => (
-              <Reveal as="li" key={s.title} delay={(i % 3) * 0.1}>
-                <article className="h-full border-t-4 border-stamp bg-white/60 p-6">
-                  <h4 className="font-display text-xl font-bold leading-snug">{s.title}</h4>
-                  {s.text && <p className="mt-2 text-[0.98rem] text-ink/85">{s.text}</p>}
-                </article>
-              </Reveal>
-            ))}
-          </ul>
         </div>
       </section>
     </SceneCtxProvider>

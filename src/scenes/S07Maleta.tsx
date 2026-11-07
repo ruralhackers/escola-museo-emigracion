@@ -128,8 +128,7 @@ export function S07Maleta() {
             <div role="img" aria-label={label} className="absolute inset-0"><Backdrop /></div>
             <div className="absolute left-[5vw] top-[11vh] z-20 max-w-[28vw]">
               <Kicker n={7}>{all.ui.kickers.coleccion}</Kicker>
-              <h2 id="coleccion-title" className="font-display text-[clamp(1.9rem,3.4vw,3.2rem)] font-bold leading-tight">{t.title}</h2>
-              <p className="mt-2 text-lg italic">{t.lead}</p>
+              <h2 id="coleccion-title" className="sr-only">{all.ui.kickers.coleccion}</h2>
             </div>
             <div className="absolute inset-x-0 bottom-[5vh] z-10">
               <OpeningSuitcase p={p}>
@@ -144,8 +143,7 @@ export function S07Maleta() {
             <div className="absolute inset-0" aria-hidden="true"><Backdrop /></div>
             <div className="relative mx-auto max-w-xl text-center">
               <div className="flex justify-center"><Kicker n={7}>{all.ui.kickers.coleccion}</Kicker></div>
-              <h2 id="coleccion-title" className="font-display text-3xl font-bold leading-tight sm:text-4xl">{t.title}</h2>
-              <p className="mt-2 text-lg italic">{t.lead}</p>
+              <h2 id="coleccion-title" className="sr-only">{all.ui.kickers.coleccion}</h2>
             </div>
             <div role="img" aria-label={label} className="relative mt-24"><OpeningSuitcase p={p} /></div>
             <ul className="relative mx-auto mt-10 grid max-w-xl grid-cols-2 justify-items-center gap-x-4 gap-y-10 sm:grid-cols-3" aria-label={all.ui.coleccion.itemsLabel}>

@@ -13,7 +13,6 @@ import { S06Viaje } from './scenes/S06Viaje'
 import { S07Maleta } from './scenes/S07Maleta'
 import { S08CasaMuseo } from './scenes/S08CasaMuseo'
 import { S09Ruta } from './scenes/S09Ruta'
-import { S10Fundacion } from './scenes/S10Fundacion'
 import { S11Apoya } from './scenes/S11Apoya'
 import { Footer } from './scenes/S12Footer'
 
@@ -88,7 +87,6 @@ export default function App() {
         <S07Maleta />
         <S08CasaMuseo />
         <S09Ruta />
-        <S10Fundacion />
         <S11Apoya />
       </main>
       <Footer />
